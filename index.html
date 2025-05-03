@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medicine Price</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <img src="Logo_KMI.jpg" alt="Logo" id="logo" />
+    <h1>Smart Medicine Finder</h1>
+    <p class="subtext">Quickly find prices for inpatient & outpatient medicines.</p>
+    <div class="search-bar">
+      <input
+        type="text"
+        id="medicineInput"
+        placeholder="Type medicine name..."
+        onkeypress="if(event.key === 'Enter') searchMedicine();"
+      />
+      <button onclick="searchMedicine()">Search</button>
+    </div>
+    <div id="result" class="fade-in"></div>
+  </div>
+
+  <script>
+    const medicineData = [
+      { name: "Paracetamol", brand: "Tylenol", dosage: "500mg", inpatientPrice: "RM3", outpatientPrice: "RM5" },
+      { name: "Ibuprofen", brand: "Advil", dosage: "200mg", inpatientPrice: "RM6", outpatientPrice: "RM8" },
+      { name: "Amoxicillin", brand: "Amoxil", dosage: "250mg", inpatientPrice: "RM9", outpatientPrice: "RM12" },
+      { name: "Cetirizine", brand: "Zyrtec", dosage: "10mg", inpatientPrice: "RM5", outpatientPrice: "RM7" },
+      { name: "Loratadine", brand: "Claritin", dosage: "10mg", inpatientPrice: "RM4", outpatientPrice: "RM6" }
+    ];
+
+    function searchMedicine() {
+      const input = document.getElementById("medicineInput").value.toLowerCase();
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = "";
+
+      const matches = medicineData.filter(med =>
+        med.name.toLowerCase().includes(input)
+      );
+
+      if (matches.length === 0 && input !== "") {
+        resultDiv.innerHTML = `<div class="card no-match">No medicine found. Please try another.</div>`;
+        return;
+      }
+
+      matches.forEach(med => {
+        const card = document.createElement("div");
+        card.className = "card fade-in";
+        card.innerHTML = `
+          <h2>${med.name}</h2>
+          <p><strong>Brand:</strong> ${med.brand}</p>
+          <p> <strong>Dosage:</strong> ${med.dosage}</p>
+          <p> <strong>Inpatient Price:</strong> ${med.inpatientPrice}</p>
+          <p> <strong>Outpatient Price:</strong> ${med.outpatientPrice}</p>
+        `;
+        resultDiv.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

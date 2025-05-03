@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #c9d6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+  }
+  
+  #logo {
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    color: #0077b6;
+    margin-bottom: 0.2em;
+  }
+  
+  .subtext {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 1.5em;
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+    min-width: 220px;
+  }
+  
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.2);
+  }
+  
+  button {
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 183, 255, 0.4);
+  }
+  
+  .card {
+    background: white;
+    border-left: 5px solid #00b4d8;
+    text-align: left;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h2 {
+    color: #023e8a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card p {
+    margin: 0.3rem 0;
+    font-size: 15.5px;
+    color: #333;
+  }
+  
+  .card.no-match {
+    text-align: center;
+    color: #d00000;
+    font-weight: bold;
+    border-left-color: #ff6b6b;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
