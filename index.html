@@ -10,7 +10,7 @@
 <body>
   <div class="container">
     <img src="Logo_KMI.jpg" alt="Logo" id="logo" />
-    <h1>Smart Medicine Finder</h1>
+    <h1>Medicine Price</h1>
     <p class="subtext">Quickly find prices for inpatient & outpatient medicines.</p>
     <div class="search-bar">
       <input
@@ -26,11 +26,19 @@
 
   <script>
     const medicineData = [
-      { name: "MEASLES, MUMPS, RUBELLA+VARICELLA VACCINE [MMRV]", brand: "MEASLES, MUMPS, RUBELLA+VARICELLA VACCINE [MMRV] ", dosage: "1 dose", inpatientPrice: "RM410", outpatientPrice: "RM359.1" },
-      { name: "CAP ESSENTIAL FORTE", brand: "ESS. PHOSPHOLOPIDS", dosage: "", inpatientPrice: "RM168", outpatientPrice: "RM147" },
-      { name: "SYRUP POTASSIUM CITRATE  120ML", brand: "POTASSIUM CITRATE", dosage: "", inpatientPrice: "RM10.00", outpatientPrice: "RM6.85" },
-      { name: "TABLET PRAZOSIN", brand: "PRAZOSIN", dosage: "2mg", inpatientPrice: "RM1.35", outpatientPrice: "RM1" },
-      { name: "LEVOTHYROXINE SODIUM", brand: "Claritin", dosage: "10mg", inpatientPrice: "RM4", outpatientPrice: "RM6" }
+      { name: "INJECTION PROQUAD ", brand: "INJECTION PROQUAD 0.5ml", dosage: "1 dose", inpatientPrice: "RM410", outpatientPrice: "RM359.10" },
+      { name: "CAP ESSENTIAL FORTE", brand: "CAP ESSENTIAL FORTE N (SANOFI) 90'S", dosage: "", inpatientPrice: "RM168", outpatientPrice: "RM147" },
+      { name: "SYRUP POTASSIUM CITRATE", brand: "SYRUP POTASSIUM CITRATE 120ml", dosage: "", inpatientPrice: "RM10.00", outpatientPrice: "RM6.85" },
+      { name: "PRAZOSIN", brand: "PRAZOSIN TABLET", dosage: "2mg", inpatientPrice: "RM1.35", outpatientPrice: "RM1" },
+      { name: "TAB TYHROSIT", brand: "TAB THYROSIT", dosage: "100mCg", inpatientPrice: "RM1.35", outpatientPrice: "RM1.00" },
+      { name: "CAPSULE PROJOINCE", brand: "CAPSULE PROJOINCE  30'S NB NORTHBAY", dosage: "", inpatientPrice: "RM295.00", outpatientPrice: "RM258.00" },
+      { name: "TABLET APPROVEL", brand: "TABLET APPROVEL", dosage: "150mg", inpatientPrice: "RM123.00", outpatientPrice: "RM97.50" },
+      { name: "TABLET DIOVAN", brand: "TABLET DIOVAN", dosage: "80mg", inpatientPrice: "RM110.00", outpatientPrice: "RM87.00" },
+      { name: "NORTHBAY PROJOIN SACHET", brand: "NORTHBAY PROJOIN SACHET  10G X 30'S", dosage: "", inpatientPrice: "RM295.00", outpatientPrice: "RM258.00" },
+      { name: "NORTHBAY NEUROJOINCE", brand: "NORTHBAY NEUROJOINCE CAPSULE 60", dosage: "", inpatientPrice: "RM180.00", outpatientPrice: "RM165.60" },
+      { name: "BENOSONE CREAM", brand: "BENOSONE CREAM 15G ( HOE)", dosage: "", inpatientPrice: "RM19.00", outpatientPrice: "RM16.00" },
+      { name: "TABLET MST CONTINUS", brand: "TABLET MST CONTINUS (30'S) PROLONGED ", dosage: "30mg", inpatientPrice: "RM20.00", outpatientPrice: "RM15.15" },
+      
     ];
 
     function searchMedicine() {
